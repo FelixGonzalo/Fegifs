@@ -7,6 +7,9 @@ export function getGifs(keyword = 'buscar') {
     .then(res => res.json())
     .then(res => {
       const { data } = res
+      
+      if (!Array.isArray(data)) return []
+
       const gifs = data.map(image => {
         const {id, title, images} = image
         const {url} = images.downsized_medium

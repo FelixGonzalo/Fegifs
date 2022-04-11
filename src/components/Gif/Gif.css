@@ -17,9 +17,11 @@
   position: absolute;
   top: 0;
   left: 10px;
+  margin-right: 10px;
   font-size: 1rem;
   opacity: 0;
-  background: black;
+  background: #000000;
+  color: #ffffff;
   border-radius: 3px;
   transition: 0.3s;
 }

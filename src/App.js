@@ -1,17 +1,14 @@
-import { useState } from 'react'
-import './App.css'
-import { ListOfGifs } from './components/ListOfGifs'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Home } from './pages/Home'
 
 function App() {
-  const [keyword, setKeyword] = useState('gato')
-
   return (
-    <div className="App">
-      <section className="App-content">
-        Fegifs
-        <ListOfGifs keyword={keyword}/>
-      </section>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/gifs/:keyword" element={<Home />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

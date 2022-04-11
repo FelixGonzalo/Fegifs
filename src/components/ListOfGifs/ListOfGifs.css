@@ -1,4 +1,6 @@
-
+.ListOfGifts_nodata {
+  color: #ffffff;
+}
 
 @media screen and (min-width: 768px) {
   .ListOfGifts {
