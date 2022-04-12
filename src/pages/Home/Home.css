@@ -1,0 +1,8 @@
+.Home h1, .Home h2 {
+  color: #ffffff;
+}
+
+.Home_lastSearch {
+  margin: 0 auto;
+  max-width: 400px;
+}

@@ -3,27 +3,22 @@ import { act } from 'react-dom/test-utils'
 import { ListOfGifs } from './index'
 
 describe('ListOfGifs', () => {
-  test('When the keyword is empty a message is displayed', () => {
-    render(<ListOfGifs keyword={''}/>)
-    const list = screen.getByText('Ingrese una palabra clave para mostrar gifs')
-    expect(list).toBeInTheDocument()
+  test('Show a message when the list is empty', () => {
+    render(<ListOfGifs gifs={[]} />)
+    const message = screen.getByText('No encontramos gifs')
+    expect(message).toBeInTheDocument()
   })
-  
-  test('When the keyword is known the List of Gifs is displayed', async () => {
-    render(<ListOfGifs keyword={'panda'}/>)
-    await waitFor(() => { expect(screen.getByTestId('ListOfGifts-withdata')).toBeInTheDocument()}, {timeout: 3 * 1000})
-  })
-  
-  test('When the keyword is unknown a message is displayed', async () => {
-    const fakeGifs = {};
-    jest.spyOn(global, "fetch").mockImplementation(() =>
-      Promise.resolve({
-        json: () => Promise.resolve({fakeGifs})
-      })
-    );
-    const keyword = 'kjsdkfhsgjy'
-    await act(async () => render(<ListOfGifs keyword={keyword}/>))
-    const list = screen.getByText(`No encontramos gifs relacionados con ${keyword}`)
-    expect(list).toBeInTheDocument()
+
+  test('Show gifs when the list has correct data', () => {
+    const data = [
+      {
+        id: 1,
+        title: 'ejemplo 1',
+        url: 'https://media.giphy.com/media/gfO3FcnL8ZK9wVgr6t/giphy.gif'
+      }
+    ]
+    render(<ListOfGifs gifs={data} />)
+    const gifs = screen.getByTestId('ListOfGifts-withdata')
+    expect(gifs).toBeInTheDocument()
   })
 })
