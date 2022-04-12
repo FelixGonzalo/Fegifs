@@ -7,7 +7,7 @@ export function useGifs(keyword = null) {
 
   useEffect(function () {
     setLoading(true)
-    const keywordToUse = keyword || localStorage.getItem('lastKeyword')
+    const keywordToUse = keyword || localStorage.getItem('lastKeyword') || 'random'
     getGifs(keywordToUse).then(gifs => {
       setGifs(gifs)
       setLoading(false)

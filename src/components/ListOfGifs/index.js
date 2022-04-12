@@ -4,7 +4,7 @@ import { Gif } from '../../components/Gif'
 export function ListOfGifs({ gifs }) {
 
   if (gifs.length === 0) {
-    return <h2 className='ListOfGifts_nodata'>No encontramos gifs</h2>
+    return <p className='ListOfGifts_nodata'>No encontramos gifs</p>
   }
 
   return (

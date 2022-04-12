@@ -11,7 +11,7 @@ export function Home() {
       <h1>Gifs para todo momento</h1>
       <SearchByUrl url='/gifs' initialKeyword='' />
       <section className='Home_lastSearch'>
-        <h2>Última busqueda</h2>
+        <h2>Última búsqueda</h2>
         <ListOfGifsByKeyword />
       </section>
     </main>

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import { Search } from '../components/Search'
 
-export function SearchByUrl({ url = '/gifs', initialKeyword = 'gato', handleKeywordOnSubmit = () => { } }) {
+export function SearchByUrl({ url = '/gifs', initialKeyword = 'random', handleKeywordOnSubmit = () => { } }) {
   let navigate = useNavigate();
 
   const [keyword, setKeyword] = useState(initialKeyword)

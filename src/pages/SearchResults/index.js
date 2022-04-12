@@ -16,7 +16,7 @@ export function SearchResults() {
 
   return (
     <main className='wrapper'>
-      <Logo />
+      <Logo isClickable={true} />
       <SearchByUrl url='/gifs' initialKeyword={initialKeyword} handleKeywordOnSubmit={handleKeywordOnSubmit} />
       <ListOfGifsByKeyword keyword={keyword} />
     </main>

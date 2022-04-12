@@ -1,6 +1,6 @@
 const API_KEY = 'ProU4V6SFfM5VkgQQ9SxC2gqNgSXAqdl'
 
-export function getGifs(keyword = 'buscar') {
+export function getGifs(keyword = 'random') {
   const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=10&offset=0&rating=g&lang=en`
 
   return fetch(API_URL)
