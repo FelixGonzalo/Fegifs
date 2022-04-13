@@ -1,5 +1,5 @@
 import { render, screen, waitFor } from '@testing-library/react'
-import { act } from 'react-dom/test-utils'
+import { BrowserRouter } from 'react-router-dom'
 import { ListOfGifs } from './index'
 
 describe('ListOfGifs', () => {
@@ -17,7 +17,11 @@ describe('ListOfGifs', () => {
         url: 'https://media.giphy.com/media/gfO3FcnL8ZK9wVgr6t/giphy.gif'
       }
     ]
-    render(<ListOfGifs gifs={data} />)
+    render(
+      <BrowserRouter>
+        <ListOfGifs gifs={data} />
+      </BrowserRouter>
+    )
     const gifs = screen.getByTestId('ListOfGifts-withdata')
     expect(gifs).toBeInTheDocument()
   })

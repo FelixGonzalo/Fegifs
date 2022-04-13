@@ -14,13 +14,14 @@ export function Gif({ id, title, url, isClickable = false }) {
 
   return (
     <div className="Gif">
-      <img 
+      <img
         className="Gif_img"
         src={url}
         alt={title}
         loading="lazy"
         onClick={() => handleClick(id)}
-        style={{cursor: isClickable ? 'pointer' : 'default'}} />
+        style={{ cursor: isClickable ? 'pointer' : 'default' }}
+        data-testid="Gif_img" />
       <p className="Gif_name">{title}</p>
     </div>
   )
