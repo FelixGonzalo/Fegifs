@@ -1,0 +1,13 @@
+.GifDetail {
+  min-height: 100vh;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.GifDetail_gif {
+  margin: 30px 0 50px;
+}

@@ -7,14 +7,27 @@ export function getGifs(keyword = 'random') {
     .then(res => res.json())
     .then(res => {
       const { data } = res
-      
+
       if (!Array.isArray(data)) return []
 
       const gifs = data.map(image => {
-        const {id, title, images} = image
-        const {url} = images.downsized_medium
-        return {id, title, url}
+        const { id, title, images } = image
+        const { url } = images.downsized_medium
+        return { id, title, url }
       })
       return gifs
+    })
+}
+
+export function getGif(id) {
+  const API_URL = `https://api.giphy.com/v1/gifs/${id}?api_key=${API_KEY}`
+
+  return fetch(API_URL)
+    .then(res => res.json())
+    .then(res => {
+      const { data } = res
+      const { id, title, images } = data
+      const { url } = images.downsized_medium
+      return { id, title, url }
     })
 }

@@ -15,7 +15,8 @@ export function ListOfGifs({ gifs }) {
             key={id}
             id={id}
             title={title}
-            url={url} />)
+            url={url}
+            isClickable={true} />)
       }
     </div>
   )
