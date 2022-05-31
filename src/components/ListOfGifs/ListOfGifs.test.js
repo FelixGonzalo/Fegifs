@@ -1,10 +1,10 @@
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
-import { ListOfGifs } from './index'
+import { ListOfGifsTemplate } from './index'
 
 describe('ListOfGifs', () => {
   test('Show a message when the list is empty', () => {
-    render(<ListOfGifs gifs={[]} />)
+    render(<ListOfGifsTemplate gifs={[]} />)
     const message = screen.getByText('No encontramos gifs')
     expect(message).toBeInTheDocument()
   })
@@ -14,12 +14,12 @@ describe('ListOfGifs', () => {
       {
         id: 1,
         title: 'ejemplo 1',
-        url: 'https://media.giphy.com/media/gfO3FcnL8ZK9wVgr6t/giphy.gif'
-      }
+        url: 'https://media.giphy.com/media/gfO3FcnL8ZK9wVgr6t/giphy.gif',
+      },
     ]
     render(
       <BrowserRouter>
-        <ListOfGifs gifs={data} />
+        <ListOfGifsTemplate gifs={data} />
       </BrowserRouter>
     )
     const gifs = screen.getByTestId('ListOfGifts-withdata')

@@ -1,0 +1,16 @@
+.Header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(7px);
+}
+
+@media screen and (min-width: 768px) {
+  .Header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Header .Search {
+    margin-top: 20px;
+  }
+}

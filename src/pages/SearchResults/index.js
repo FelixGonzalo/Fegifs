@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { ListOfGifsByKeyword } from '../../containers/ListOfGifsByKeyword'
 import { Logo } from '../../components/Logo'
-import { SearchByUrl } from '../../containers/SearchByUrl'
+import { Search } from '../../components/Search'
+import { ListOfGifs } from '../../components/ListOfGifs'
 
 export function SearchResults() {
   let params = useParams()
@@ -15,10 +15,14 @@ export function SearchResults() {
   }
 
   return (
-    <main className='wrapper'>
+    <main className="wrapper">
       <Logo isClickable={true} />
-      <SearchByUrl url='/gifs' initialKeyword={initialKeyword} handleKeywordOnSubmit={handleKeywordOnSubmit} />
-      <ListOfGifsByKeyword keyword={keyword} />
+      <Search
+        url="/gifs"
+        initialKeyword={initialKeyword}
+        handleKeywordOnSubmit={handleKeywordOnSubmit}
+      />
+      <ListOfGifs keyword={keyword} />
     </main>
   )
 }
