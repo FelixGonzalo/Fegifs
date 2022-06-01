@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getGif } from '../services/getGifs'
+import { getGif } from '../services/giphy/getGifs'
 
 export function useGif(id) {
   const [gif, setGif] = useState({})
@@ -8,10 +8,11 @@ export function useGif(id) {
   useEffect(() => {
     setLoading(true)
     getGif(id)
-      .then(gif => {
+      .then((gif) => {
         setGif(gif)
         setLoading(false)
-      }).catch(err => {
+      })
+      .catch((err) => {
         setLoading(false)
         console.error(err)
       })

@@ -1,0 +1,16 @@
+.Footer {
+  padding: 100px 0 50px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.Footer_love {
+  color: rgb(253, 154, 154);
+}
+
+.Footer_link {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}

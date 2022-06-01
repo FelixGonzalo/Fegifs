@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getGifs } from '../services/getGifs'
+import { getGifs } from '../services/giphy/getGifs'
 
 export function useGifs(keyword = null) {
   const [loading, setLoading] = useState(false)

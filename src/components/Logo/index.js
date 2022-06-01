@@ -1,8 +1,7 @@
-import { useNavigate } from "react-router-dom"
-
+import { useNavigate } from 'react-router-dom'
 
 export function Logo({ isClickable = false }) {
-  let navigate = useNavigate();
+  let navigate = useNavigate()
 
   const handleClick = () => {
     if (isClickable) navigate('/')
@@ -15,8 +14,9 @@ export function Logo({ isClickable = false }) {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="116.034 14 267.931 122"
       style={{
-        background: "0 0",
-        cursor: isClickable ? 'pointer' : 'default'
+        background: '0 0',
+        cursor: isClickable ? 'pointer' : 'default',
+        marginLeft: '-43px',
       }}
       preserveAspectRatio="xMidYMid"
       onClick={handleClick}

@@ -1,9 +1,9 @@
-.Header {
+/* .Header {
   position: sticky;
   top: 0;
   backdrop-filter: blur(7px);
   z-index: 100;
-}
+} */
 
 @media screen and (min-width: 768px) {
   .Header {
