@@ -11,14 +11,14 @@ export function GifDetail() {
   const { gif, loading } = useGif(id)
 
   return (
-    <main className='wrapper GifDetail'>
+    <main className="wrapper GifDetail">
       <Logo isClickable={true} />
       <div className="GifDetail_gif">
-        {
-          loading
-            ? <Loader />
-            : <Gif id={gif.id} title={gif.title} url={gif.url} />
-        }
+        {loading ? (
+          <Loader />
+        ) : (
+          <Gif id={gif.id} title={gif.title} url={gif.url} showName={true} />
+        )}
       </div>
     </main>
   )
