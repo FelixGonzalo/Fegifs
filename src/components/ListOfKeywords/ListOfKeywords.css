@@ -1,0 +1,19 @@
+.ListOfKeywords_links {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ListOfKeywords_link {
+  padding: 5px 15px;
+  border-radius: 15px;
+  text-decoration: none;
+  background: #ffffff;
+  color: var(--color-background);
+  transition: 0.3s;
+}
+
+.ListOfKeywords_link:hover {
+  transform: scale(1.1);
+}

@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Logo } from '../../components/Logo'
 import { Search } from '../../components/Search'
 import { ListOfGifs } from '../../components/ListOfGifs'
+import './SearchResults.css'
 
 export function SearchResults() {
   let params = useParams()
@@ -15,7 +16,7 @@ export function SearchResults() {
   }
 
   return (
-    <main className="wrapper">
+    <main className="wrapper SearchResults">
       <Logo isClickable={true} />
       <Search
         url="/gifs"
