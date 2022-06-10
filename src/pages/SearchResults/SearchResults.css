@@ -1,3 +1,24 @@
 .SearchResults .Search {
-  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.SearchResults_header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-background);
+}
+
+.SearchResults_noMoreData {
+  margin-top: 40px;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(234, 234, 234);
+}
+
+.SearchResults_noMoreData span {
+  margin-top: 10px;
+  font-size: 25px;
+  color: #fff;
+  display: block;
 }

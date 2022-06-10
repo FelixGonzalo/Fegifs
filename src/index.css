@@ -26,6 +26,14 @@ code {
   box-sizing: border-box;
 }
 
-.title, .subtitle, .text {
+.title,
+.subtitle,
+.text {
   color: #ffffff;
+}
+
+.global_link {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
 }

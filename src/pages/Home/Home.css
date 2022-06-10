@@ -7,6 +7,12 @@
   max-width: 400px;
 }
 
+.Home_aside_title .global_link {
+  display: block;
+  font-size: 15px;
+  text-align: right;
+}
+
 @media screen and (min-width: 768px) {
   .Home_content {
     display: flex;
